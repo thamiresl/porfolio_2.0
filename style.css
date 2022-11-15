@@ -1,0 +1,186 @@
+:root {
+    --color-base: rgb(107, 27, 62);
+    --color-secund: #ffffff;
+    --color-background: #BD9F8B; 
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+.max-width {
+    max-width: 1300px;
+    padding: 0 80px;
+    margin: auto;
+}
+
+.navbar {
+    position: fixed;
+    width: 100%;
+    padding: 15px 0;
+    transition: all 2s ease;
+}
+
+.navbar.stick {
+    background: var(--color-base);
+    padding: 30px 0;
+}
+
+.navbar .max-width {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar .title  {
+    font-size: 42px;
+}
+
+.navbar .title a {
+    color: var(--color-secund);
+    font-weight: 500;
+}
+
+.navbar .menu li {
+    list-style: none;
+    display: inline-block;
+}
+
+.navbar .menu li a {
+    color:  var(--color-secund);
+    font-size: 24px;
+    font-weight: 500;
+    margin-left: 25px;
+    transition: 0.3s ease;
+}
+
+.navbar .menu li a:hover {
+    color: rgb(67, 25, 16);
+    font-size: 26px;
+    font-weight: 600;
+}
+
+.home {
+    display: flex;
+    background-color: var(--color-background);
+    background-image: url(/image/foto-portfolio-pronta.png);
+    background-position: right;
+    background-size: contain;
+    background-repeat: no-repeat;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    box-sizing: border-box;
+    height: 100vh;
+    min-height: 500px;
+    padding: 0 112px;
+
+}
+
+.home .max-width {
+    margin: auto 0 auto 40px;
+}
+
+.home .home-content .text-1 {
+    font-size: 27px;
+}
+
+.home .home-content .text-2 {
+    font-size: 75px;
+    font-weight: 500;
+    margin-left: -3px;
+}
+
+.home .home-content .text-3 {
+    font-size: 40px;
+    margin: 5px 0;
+}
+
+.home .home-content .text-3 span {
+    color: var(--color-base);
+    font-weight: 600;
+}
+
+.space {
+    height: 68px;
+}
+
+.menu-btn {
+    color: var(--color-secund);
+    font-size: 26px;
+    cursor: pointer; 
+    display: none;
+}
+
+/* responsivo  */
+@media (max-width: 1104px) {
+    .navbar .max-width {
+        margin-left: 0;
+    }
+}
+
+@media (max-width: 991px) {
+    .navbar .max-width {
+        padding: 0 50px;
+    }
+}
+
+@media (max-width: 947px) {
+    .max-width {
+        padding: 0 50px;
+    }
+    .menu-btn {
+        display: block;
+        z-index: 999;
+    }
+    .navbar .menu {
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        left: 0;
+        top: 0;
+        background: var(--color-background);
+        padding-top: 80px;
+        text-align: center;
+    }
+    .navbar .menu li {
+        display: block;
+    }
+    .navbar .menu li a {
+        display: inline-block;
+        margin: 20px 0;
+        font-size: 25px;
+    }
+    .home .home-content .text-2 {
+        font-size: 70px;
+    }
+    
+    .home .home-content .text-3 {
+        font-size: 35px;
+    }
+}
+
+@media (max-width: 690px) {
+    .home .home-content .text-2 {
+        font-size: 60px;
+    }
+    
+    .home .home-content .text-3 {
+        font-size: 32px;
+    }
+    
+}
+
+@media (max-width: 500px) {
+    .home .home-content .text-2 {
+        font-size: 50px;
+    }
+    
+    .home .home-content .text-3 {
+        font-size: 27px;
+    }
+    
+}
